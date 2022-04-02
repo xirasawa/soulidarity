@@ -48,13 +48,18 @@ img {
 }*/
 
 /* Customize Range Slider */
+.irs {
+  font: var(--body-font);
+}
+
 .irs--round .irs-bar,
-.irs--round .irs-handle,
+/* .irs--round .irs-handle, */
 .irs--round .irs-from, .irs--round .irs-to, .irs--round .irs-single {
   background-color: var(--base-color);
 }
 
 .irs--round .irs-handle {
+  border: 5px solid var(--body-color);
   border-color: var(--base-color);
 }
 
@@ -62,8 +67,45 @@ img {
   border-top-color: var(--base-color);
 }
 
+.irs--round .irs-grid-pol {
+  height: 0.3rem;
+  margin-top: 0.04rem;
+  background-color: var(--base-color);
+}
+
 .irs--round .irs-grid-pol.small {
   background-color: var(--body-color);
+}
+
+.irs-min, .irs-max {
+  display: none;
+}
+
+.irs--round .irs-line {
+  height: 0.39rem;
+}
+
+.irs--round .irs-bar {
+  height: 0.395rem;
+}
+
+.irs--round.irs-with-grid {
+  height: 4.6rem;
+  width: 23rem;
+  margin-bottom: 2.75rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.irs--round .irs-grid-text {
+  color: var(--text-color);
+  font: 500 0.85rem var(--body-font);
+}
+
+.irs--round .irs-from, .irs--round .irs-to, .irs--round .irs-single {
+  font: 600 0.85rem var(--body-font);
+  height: 1.3rem;
+  line-height: 1.25;
 }
 
 /******************** BASE ********************/
@@ -93,7 +135,7 @@ body {
   display: inline-flex;
   align-items: center;
   padding: 0 2rem;
-  border-radius: 0.75rem;
+  border-radius: 0.5rem;
   font: 500 1rem var(--body-font);
   transition: background 0.3s;
 }
@@ -346,7 +388,7 @@ nav.show div.icon-close {
 
 #home .image img,
 #home .image::before {
-  border-radius: 0.75rem;
+  border-radius: 0.5rem;
 }
 
 #home .text {
@@ -355,11 +397,8 @@ nav.show div.icon-close {
   text-align: center;
 }
 
-#home .text h2 {
-  margin-bottom: 1rem;
-}
-
 #home .text p {
+  margin-top: 1rem;
   margin-bottom: 2rem;
   max-width: 100%;
 }
@@ -403,7 +442,7 @@ nav.show div.icon-close {
 
 #about .image img,
 #about .image::before {
-  border-radius: 0.75rem;
+  border-radius: 0.5rem;
 }
 
 #about .text {
@@ -463,7 +502,7 @@ nav.show div.icon-close {
   display: flex;
   align-items: center;
   margin: auto;
-  border-radius: 0.75rem;
+  border-radius: 0.5rem;
   z-index: 1;
 }
 
@@ -498,31 +537,93 @@ nav.show div.icon-close {
 }
 
 #donations .container {
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 #donations header {
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 2rem;
   justify-content: center;
-  /* background-color: var(--base-color-second); */
 }
 
-#donations .postos,
+#donations header p {
+  max-width: 40rem;
+  text-align: center;
+}
+
 #donations .pix {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  width: 28em;
+  height: 29.5rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#donations .pixzinho {
+  align-items: center;
+  padding: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  align-content: center;
+}
+
+#donations .pixzinho p {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.25rem;
+}
+
+#donations .pix .qrcode.show img {
+  height: 11rem;
+  width: auto;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#donations .postos {
+  width: 28em;
+  height: 25.25rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#donations .postos .grid {
+  padding: 1.5rem;
+}
+
+#donations .pix {
+  margin-bottom: 2rem;
+}
+
+#donations h1 {
+  margin-bottom: 0.5rem;
 }
 
 #donations h2 {
   font-size: 1.6rem;
+  margin-left: 1rem;
+  margin-top: 1.25rem;
 }
 
+#donations header ul {
+  display: flex;
+  align-items: center;
+  margin-top: 1.2rem;
+  justify-content: center;
+}
+
+#donations header ul i,
 #donations ul li i {
   font-size: 1.5rem;
   margin-right: 0.625rem;
+  color: var(--base-color);
 }
 
 #donations ul.grid {
@@ -535,16 +636,15 @@ nav.show div.icon-close {
   display: flex;
   align-items: center;
 }
+  
 
-#donations ul li i {
-  color: var(--base-color);
-}
-
+#donations header ul a,
 #donations ul li a {
   text-decoration: none;
   color: var(--text-color);
 }
 
+#donations header ul a:hover,
 #donations ul li a:hover {
   color: var(--base-color);
 }
@@ -765,7 +865,7 @@ footer .social a:hover {
   .section {
     padding: 10rem 0;
   }
-
+  
   .section header,
   #donations header {
     max-width: 50rem;
@@ -840,11 +940,11 @@ footer .social a:hover {
   }
 
   #home .text {
+    margin-right: -4.7rem;
     order: 0;
     max-width: 40rem;
     text-align: left;
     margin-left: unset;
-    margin-right: unset;
   }
 
   #home .image::before {
@@ -853,8 +953,6 @@ footer .social a:hover {
   }
 
   #home .text p {
-    margin-top: 1rem;
-    margin-bottom: 3rem;
     max-width: 100%;
   }
 
@@ -884,7 +982,7 @@ footer .social a:hover {
 
   #about .text {
     margin-left: unset;
-    margin-right: 1.5rem;
+    margin-right: unset;
   }
 
   /* services */
@@ -915,6 +1013,57 @@ footer .social a:hover {
   #donations .container {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  #donations .column {
+    display: flex;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  #donations .pix,
+  #donations .postos {
+    height: 31rem;
+    width: 34rem;
+    margin-bottom: unset;
+  }
+
+  .irs--round.irs-with-grid {
+    height: 4.7rem;
+    width: 26.75rem;
+    margin-bottom: 2.7rem;
+  }
+
+  #donations h2 {
+    margin-top: 1.8rem;
+    margin-left: unset;
+  }
+
+  #donations .pixzinho h2 {
+    margin-left: 2.15rem;
+    margin-top: 1.3rem;
+  }
+
+  #donations .pixzinho p {
+    margin-top: 2rem;
+  }
+
+  .irs--round .irs-grid-text {
+    font-size: 0.92rem;
+  }
+
+  #donations header p {
+    max-width: 44rem;
+  }
+
+  #donations .postos .grid {
+    margin-left: 1.25rem;
+    gap: 3rem;
+  }
+
+  #donations .pix .qrcode.show img {
+    height: 11.5rem;
   }
 
   /* contact */
@@ -1012,6 +1161,10 @@ footer .social a:hover {
     gap: 10rem;
     align-items: center;
   }
+  
+  #home .text {
+    margin-right: unset;
+  }
 
   #about .image img {
     height: 26rem;
@@ -1033,5 +1186,68 @@ footer .social a:hover {
   #contact .text {
     max-width: 33rem;
   }
+
+  /* DONATIONS */
+  #donations .column {
+    gap: unset;
+  }
+
+  #donations .pix,
+  #donations .postos {
+    height: 32.5rem;
+    width: 40rem;
+  }
+
+  #donations .pix {
+    margin-right: 1.5rem;
+  }
+
+  #donations .postos {
+    margin-left: 1.5rem;
+  }
+
+  .irs--round.irs-with-grid {
+    height: 4.8rem;
+    width: 32rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .irs--round .irs-grid-pol {
+    height: 0.28rem;
+    width: 0.07rem;
+    margin-top: -0.1rem;
+  }
+
+  #donations .pixzinho h2 {
+    margin-left: 2.35rem;
+    margin-top: 1.75rem;
+  }
+
+  #donations .pix .qrcode.show img {
+    height: 12rem;
+  }
+
+  #donations .postos .grid {
+    margin-left: 2.35rem;
+    margin-right: 1.25rem;
+    gap: 3.25rem;
+  }
+
+  #donations h2 {
+    margin-top: 1.75rem;
+  }
+
+  #donations header p {
+    max-width: 47rem;
+  }
+
+  #donations .pixzinho p {
+    margin-top: 1.5rem;
+  }
+
+  .irs--round.irs-with-grid {
+    margin-bottom: 2.35rem;
+  }
+
 }
 /***** medium devices: > 767 *****/

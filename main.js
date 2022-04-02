@@ -107,10 +107,10 @@ window.addEventListener('scroll', function () {
 /* SLIDER DONATIONS */
 $('.js-range-slider').ionRangeSlider({
   type: 'single',
-  from: 5,
+  from: 3,
   grid: true,
   skin: 'round',
-  values: ['R$10', 'R$25', 'R$50', 'R$100', 'R$250', 'Outro valor'],
+  values: ['R$10', 'R$25', 'R$50', 'R$150', 'R$250', 'outro valor'],
   onChange: function (data) {
     document.querySelector('.qrcode.show')?.classList.remove('show')
     document.querySelector('#qrcode-' + data.from_pretty).classList.add('show')
