@@ -91,7 +91,7 @@ img {
 
 .irs--round.irs-with-grid {
   height: 4.6rem;
-  width: 23rem;
+  width: 17.6rem;
   margin-bottom: 2.75rem;
   margin-left: auto;
   margin-right: auto;
@@ -135,7 +135,7 @@ body {
   display: inline-flex;
   align-items: center;
   padding: 0 2rem;
-  border-radius: 0.5rem;
+  border-radius: 0.84rem;
   font: 500 1rem var(--body-font);
   transition: background 0.3s;
 }
@@ -388,7 +388,7 @@ nav.show div.icon-close {
 
 #home .image img,
 #home .image::before {
-  border-radius: 0.5rem;
+  border-radius: 0.84rem;
 }
 
 #home .text {
@@ -442,7 +442,7 @@ nav.show div.icon-close {
 
 #about .image img,
 #about .image::before {
-  border-radius: 0.5rem;
+  border-radius: 0.84rem;
 }
 
 #about .text {
@@ -496,23 +496,23 @@ nav.show div.icon-close {
 }
 
 #services .card img {
-  width: 27.25rem;
+  width: 20.1rem;
   height: auto;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.55);
   display: flex;
   align-items: center;
   margin: auto;
-  border-radius: 0.5rem;
+  border-radius: 0.84rem;
   z-index: 1;
 }
 
 #services .image::before {
   content: '';
-  height: 60%;
+  height: 53%;
   width: 200%;
   background: var(--base-color-second);
   position: absolute;
-  top: 20%;
+  top: 24%;
   z-index: 0;
 }
 
@@ -555,12 +555,13 @@ nav.show div.icon-close {
 }
 
 #donations .pix {
-  width: 28em;
+  width: 20.58em;
   height: 29.5rem;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
-  border-radius: 0.5rem;
+  border-radius: 0.84rem;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 2rem;
 }
 
 #donations .pixzinho {
@@ -572,6 +573,7 @@ nav.show div.icon-close {
 }
 
 #donations .pixzinho p {
+  text-align: center;
   display: flex;
   justify-content: center;
   margin-top: 1.25rem;
@@ -586,20 +588,16 @@ nav.show div.icon-close {
 }
 
 #donations .postos {
-  width: 28em;
-  height: 25.25rem;
+  width: 20.58em;
+  height: 31.125rem;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
-  border-radius: 0.5rem;
+  border-radius: 0.84rem;
   margin-left: auto;
   margin-right: auto;
 }
 
 #donations .postos .grid {
   padding: 1.5rem;
-}
-
-#donations .pix {
-  margin-bottom: 2rem;
 }
 
 #donations h1 {
@@ -609,7 +607,7 @@ nav.show div.icon-close {
 #donations h2 {
   font-size: 1.6rem;
   margin-left: 1rem;
-  margin-top: 1.25rem;
+  margin-top: 0.75rem;
 }
 
 #donations header ul {
@@ -719,26 +717,16 @@ nav.show div.icon-close {
   margin-right: 0.625rem;
 }
 
+#contact .links .pru {
+  transition: 0.3s;
+}
+
+#contact .links .pru:hover {
+  transform: translateY(-5px);
+}
+
 #contact ul.grid {
   gap: 2rem;
-}
-
-#contact ul li {
-  display: flex;
-  align-items: center;
-}
-
-#contact ul li i {
-  color: var(--base-color);
-}
-
-#contact ul li a {
-  text-decoration: none;
-  color: var(--text-color);
-}
-
-#contact ul li a:hover {
-  color: var(--base-color);
 }
 
 /*********************** FOOTER ***************************/
@@ -810,6 +798,48 @@ footer .social a:hover {
 
 /*=============== MEDIA QUERIES ===============*/
 
+/***** medium devices: > 390 *****/
+@media (min-width: 390px) {
+  #services .card img {
+    width: 21.9rem;
+  }
+
+  #donations .pix {
+    width: 21.58rem;
+    height: 29.7rem;
+  }
+
+  #donations .postos {
+    width: 21.58rem;
+    height: 31.5rem;
+  }
+
+  .irs--round.irs-with-grid {
+    width: 18.25rem;
+  }
+}
+
+
+/***** medium devices: > 410 *****/
+@media (min-width: 410px) {
+  #services .card img {
+    width: 23rem;
+  }
+
+  #donations .pix {
+    width: 23.25rem;
+  }
+
+  #donations .postos {
+    width: 23.25rem;
+    height: 30.25rem;
+  }
+
+  .irs--round.irs-with-grid {
+    width: 20.3rem;
+  }
+}
+
 /* menu aparece de 992 para cima */
 /***** large devices: > 992 *****/
 @media (min-width: 992px) {
@@ -835,9 +865,13 @@ footer .social a:hover {
     z-index: 1;
   }
 
-  /* #services .fixed.image::before {
-    height: 34%;
-    top: 281%;
+  /* #services .fixed::before {
+    margin-top: -16rem;
+    background-color: var(--base-color-second);
+    content: '';
+    height: 15.25rem;
+    width: 100%;
+    transform: translate(0, 18.25rem);
   } */
 
 /***** extra large devices: > 1200 *****/
@@ -1179,6 +1213,14 @@ footer .social a:hover {
     width: 28rem;
   }
 
+  /* #services .fixed::before {
+    background-color: var(--base-color-second);
+    content: '';
+    height: 16.6rem;
+    width: 100%;
+    transform: translate(0, 20.05rem);
+  } */
+
   #contact .container {
     max-width: 65rem;
   }
@@ -1250,4 +1292,3 @@ footer .social a:hover {
   }
 
 }
-/***** medium devices: > 767 *****/

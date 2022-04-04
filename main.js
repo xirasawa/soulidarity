@@ -55,7 +55,7 @@ scrollReveal.reveal(
   #services header, #services .swiper,
   #donations header, #donations .donations,
   #contact .text, #contact .links,
-  #footer .brand, #footer .social
+  #footer .brand
   `,
   { interval: 100 }
 )
@@ -110,7 +110,7 @@ $('.js-range-slider').ionRangeSlider({
   from: 3,
   grid: true,
   skin: 'round',
-  values: ['R$10', 'R$25', 'R$50', 'R$150', 'R$250', 'outro valor'],
+  values: ['R$10', 'R$25', 'R$50', 'R$150', 'R$250', 'outro<br>valor'],
   onChange: function (data) {
     document.querySelector('.qrcode.show')?.classList.remove('show')
     document.querySelector('#qrcode-' + data.from_pretty).classList.add('show')
