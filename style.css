@@ -108,6 +108,13 @@ img {
   line-height: 1.25;
 }
 
+.irs-grid-text.js-grid-text-5 {
+  top: 0.29rem;
+  max-width: 3rem;
+  white-space: normal;
+  padding-left: 0.125rem;
+}
+
 /******************** BASE ********************/
 
 html {
@@ -205,6 +212,11 @@ body {
 #header .logo {
   display: flex;
   align-items: center;
+  transition: 0.2s;
+}
+
+#header .logo span {
+  transition: 0.2s;
 }
 
 #header img {
@@ -528,7 +540,22 @@ nav.show div.icon-close {
 #services .text ul {
   display: flex;
   align-items: center;
+  margin-top: 1rem;
+}
+
+#services .reportage {
+  text-align: center;
   margin-top: 1.2rem;
+  /* margin-bottom: -1rem; */
+}
+
+#services .reportage a {
+  color: var(--base-color);
+  text-decoration: underline;
+}
+
+#services .reportage a:hover {
+  color: var(--base-color-alt);
 }
 
 /******************** DONATIONS ********************/
@@ -836,7 +863,7 @@ footer .social a:hover {
   }
 
   .irs--round.irs-with-grid {
-    width: 20.3rem;
+    width: 19.8rem;
   }
 }
 
@@ -864,15 +891,6 @@ footer .social a:hover {
   #services .card {
     z-index: 1;
   }
-
-  /* #services .fixed::before {
-    margin-top: -16rem;
-    background-color: var(--base-color-second);
-    content: '';
-    height: 15.25rem;
-    width: 100%;
-    transform: translate(0, 18.25rem);
-  } */
 
 /***** extra large devices: > 1200 *****/
 @media (min-width: 1200px) {
@@ -1017,6 +1035,15 @@ footer .social a:hover {
   #about .text {
     margin-left: unset;
     margin-right: unset;
+  }
+
+  #services .fixed::before {
+    margin-top: -16rem;
+    background-color: var(--base-color-second);
+    content: '';
+    height: 15rem;
+    width: 100%;
+    transform: translate(0, 19.275rem);
   }
 
   /* services */
@@ -1213,13 +1240,13 @@ footer .social a:hover {
     width: 28rem;
   }
 
-  /* #services .fixed::before {
+  #services .fixed::before {
     background-color: var(--base-color-second);
     content: '';
-    height: 16.6rem;
+    height: 16.25rem;
     width: 100%;
     transform: translate(0, 20.05rem);
-  } */
+  }
 
   #contact .container {
     max-width: 65rem;
