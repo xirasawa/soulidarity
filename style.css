@@ -686,6 +686,40 @@ nav.show div.icon-close {
   display: block;
 }
 
+#donations .vakinha {
+  width: 20.58em;
+  height: 4.5rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 0.84rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.4rem;
+}
+
+#donations .vaka a {
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#donations .vakinha .vaka a img {
+  background-color: var(--base-color);
+  height: 1.9rem;
+  width: auto;
+  margin-right: 0.825rem;
+}
+
+#donations a:hover {
+  color: var(--base-color-alt);
+}
+
+#donations .vakinha .vaka a:hover > img {
+  background-color: var(--base-color-alt);
+}
+
 /******************** swiper ********************/
 .swiper-slide {
   height: auto;
@@ -844,6 +878,10 @@ footer .social a:hover {
   .irs--round.irs-with-grid {
     width: 18.25rem;
   }
+
+  #donations .vakinha {
+    width: 21.58em;
+  }
 }
 
 
@@ -864,6 +902,10 @@ footer .social a:hover {
 
   .irs--round.irs-with-grid {
     width: 19.8rem;
+  }
+  
+  #donations .vakinha {
+    width: 23.25em;
   }
 }
 
@@ -1127,6 +1169,17 @@ footer .social a:hover {
     height: 11.5rem;
   }
 
+  #donations .vakinha {
+    width: 60.5em;
+    margin-top: 0;
+    padding: 1.2rem;
+  }
+
+  #donations .vakinha .vaka a img {
+    margin-left: 0.825rem;
+    height: 2.2rem;
+  }
+
   /* contact */
   #contact .text {
     max-width: 27rem;
@@ -1316,6 +1369,16 @@ footer .social a:hover {
 
   .irs--round.irs-with-grid {
     margin-bottom: 2.35rem;
+  }
+
+  #donations .vakinha {
+    width: 83.15rem;
+    padding: 1.1rem;
+  }
+
+  #donations .vakinha .vaka a img {
+    margin-left: 0.825rem;
+    height: 2.2rem;
   }
 
 }
