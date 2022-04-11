@@ -1202,6 +1202,7 @@ footer .social a:hover {
   }
 
   #contact .email .button {
+    height: 3.6rem;
     margin-bottom: unset;
   }
 
